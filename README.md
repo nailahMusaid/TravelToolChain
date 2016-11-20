@@ -1,5 +1,8 @@
-# cehack-sans-dump
+# DUMP - a Cogint (IBM + Mubadla) and Etihad Hackathon 2016 Project
 Travel adviser that sends you where you actually want to go. With one click.
+
+##Problem
+How can we enhance travel experience with IBM Watson?
 
 ###Persona
 light minded college student who wants to go somewhere for an upcoming holiday (NYUAD Student)
@@ -10,7 +13,7 @@ light minded college student who wants to go somewhere for an upcoming holiday (
 1. can't afford to decide wrong OR late
 1. Paris syndrome: People are going to places that they don't actually enjoy.
 
-###Solution
+##Solution
 Website that takes twitter handle / facebook profile and returns suggested country destinations. Personalities match places (Creative art lover - New York , sporty adventurer - Oman, Romanticists - Rome)
 
 ###Watson APIs
@@ -20,7 +23,7 @@ Website that takes twitter handle / facebook profile and returns suggested count
 ###Training data source
 The Gazelle articles + and which countries authors flew to
 
-###Expansion
+##Future Goals
 1. Specific budget and dates. 
 1. View Etihad flights
 1. Give travel packages as gifts (if they have twitter)
