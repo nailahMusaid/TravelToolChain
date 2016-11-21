@@ -1,5 +1,5 @@
 # Dump by sans
-Travel adviser that sends you where you actually want to go. With one click. Created during Cogint (IBM + Mubadla) and Etihad Hackathon 2016.
+Travel adviser that sends you where you actually want to go. With one click. Created during Cogint (IBM + Mubadala) and Etihad Hackathon 2016.
 
 ##Problem
 How can we enhance travel experience with IBM Watson?
