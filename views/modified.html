@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-  <title>Personality Insights</title>
+  <title>Destinator</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,13 +58,16 @@
       -webkit-background-size: cover;
       background-size: cover;
       /*filter: blur(4px) opacity(87%);*/
-      filter: blur(12px) opacity(51%) drop-shadow(0 0 rgba(218,147,158, 0.6));
+      filter: blur(12px) opacity(51%) drop-shadow(0 0 rgba(218,255,250, 0.6));
       width: 100vw;
       height: 100vh;
       position: absolute;
     }
     body {
       font-family: Lato, sans-serif;
+    }
+    main {
+      float: left;
     }
     .twitter-bar {
       top: 7em;
@@ -115,6 +118,15 @@
     .fa-plane::before {
       left: 48%;
       top: 52%;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.7em;
+      }
+      .body-container {
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
     }
   </style>
 </head>
@@ -187,7 +199,7 @@
     </div>
   </div>
   <header class="col-lg-12">
-    <h1 class="col-lg-8 centered">
+    <h1 class="col-lg-6 col-sm-8 centered">
       DESTINATOR
     </h1>
     <div class="twitter-bar"><span class="fa fa-twitter" aria-label="Twitter handle"></span><input type="text" id="twitter-handle" placeholder="Give us your Twitter handle. We'll fly you where you'll love.">
