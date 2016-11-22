@@ -1,25 +1,27 @@
 .tooltip.in {
-  background: rgb(50, 50, 50) none repeat scroll 0% 0%;
-  color: #F7F7F7;
-  padding: 8px;
-  max-width: 400px;
-  margin: 30px;
+    background: rgb(50, 50, 50) none repeat scroll 0% 0%;
+    color: #F7F7F7;
+    padding: 8px;
+    max-width: 400px;
+    margin: 30px;
 }
 
 .btn {
-  height: 2.5em;
-  padding: 0em;
-  margin-bottom: 0em;
+    height: 2.5em;
+    padding: 0em;
+    margin-bottom: 0em;
 }
+
 .btn-block {
-  margin-bottom: 0em;
+    margin-bottom: 0em;
 }
+
 .content {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .wordsCount {
-  padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .model_title {
@@ -43,6 +45,7 @@
     padding-left: 0px;
     padding-bottom: 5px;
 }
+
 .col555px {
     height: 555px;
     overflow: auto;
@@ -54,34 +57,317 @@
 }
 
 .results > .row {
-  clear: left;
+    clear: left;
 }
 
 .control-label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 #vizcontainer svg {
-  min-width: 480px;
-  width: 100%;
-  height: 100%;
+    min-width: 480px;
+    width: 100%;
+    height: 100%;
 }
+
 .sample-radio-list {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 .sample-radio-container {
-  display: inline-block;
-  margin-left: 10px;
+    display: inline-block;
+    margin-left: 10px;
 }
+
 input[type="radio"] {
-  margin:3px 5px 0px 0px;
+    margin: 3px 5px 0px 0px;
 }
+
 .buttons-container {
-  margin-top: 15px;
+    margin-top: 15px;
 }
+
+
 /* Portrait tablets and small desktops */
+
 @media (max-width: 1200px) {
     .col555px {
         height: 100%;
+    }
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.results {
+    position: relative;
+    top: 15em;
+}
+
+h1 {
+    margin: 0;
+    margin-top: -5vh;
+    color: black;
+}
+
+header {
+    margin-top: 20vh;
+    height: 20vh;
+    font-family: Oswald, sans-serif;
+    font-kerning: auto;
+    font-size: 2em;
+    /*letter-spacing: 0.1em;*/
+    float: left;
+    width: 100%;
+}
+
+header.result-page {
+    font-size: 1em;
+    margin-top: 5vh;
+}
+
+header.result-page h1 {
+    /*mt*/
+}
+
+header p {
+    text-align: center;
+    font-family: Lato;
+    font-size: 0.7em;
+    /*letter-spacing: 0.05em;*/
+    margin-top: 10vh;
+}
+
+section,
+header {
+    position: relative;
+}
+
+.body-container {
+    margin: 0;
+    background: url("../images/Low Poly World Map.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    /*filter: blur(4px) opacity(87%);*/
+    filter: blur(12px) opacity(51%) drop-shadow(0 0 rgba(218, 255, 250, 0.6));
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+body {
+    font-family: Lato, sans-serif;
+}
+
+.twitter-bar {
+    top: 7em;
+    font-family: Lato, sans-serif;
+    height: 1.25em;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.twitter-bar input {
+    padding-left: 0.5em;
+    font-size: 0.7em;
+    width: 15em;
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+}
+
+.twitter-bar * {
+    height: 100%;
+    border: none;
+    vertical-align: middle;
+}
+
+.twitter-bar > div {
+    display: inline;
+}
+
+.fa-twitter {
+    color: #b7b7b7;
+    background-color: #ebebeb;
+    font-size: 0.7em;
+    width: 2em;
+    position: relative;
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+}
+
+.fa-twitter::before,
+.fa-plane::before {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.fa-plane {
+    width: 2em;
+    color: #fff;
+    background-color: #0064cd;
+    font-size: 0.7em;
+    position: relative;
+    border-radius: 0.2em;
+}
+
+.fa-plane::before {
+    left: 48%;
+    top: 52%;
+}
+
+section.results {
+    /*float: left;*/
+    text-align: center;
+    position: relative;
+    top: -20%;
+}
+
+.clearfix:after,
+section.results:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+a.recommendation-block {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    background-color: RGB(208, 162, 52);
+    /*   border: 1px solid grey; */
+}
+
+a.recommendation-block * {
+    margin: 0;
+    padding: 0;
+}
+
+.img-container-container {
+    width: 18em;
+    height: 18em;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+    background-image: url("http://placehold.it/600x400/1eb53a/0099b5/?text=Uzbek");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.country-name {
+    color: #fff;
+    position: absolute;
+    top: 0.1em;
+    left: 0.2em;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-family: Oswald;
+}
+
+.book-flight {
+    font-size: 1em;
+    text-align: right;
+    text-transform: lowercase;
+    font-family: Lato;
+}
+
+.book-flight:first-letter {
+    text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+    .twitter-bar {
+        font-size: 0.8em;
+    }
+    .img-container-container {
+        width: 14em;
+        height: 14em;
+    }
+}
+
+@media (max-width: 800px) {
+    .twitter-bar {
+        font-size: 0.8em;
+    }
+    .img-container-container {
+        width: 11em;
+        height: 11em;
+    }
+}
+
+@media (max-width: 600px) {
+    header p {
+        font-size: 1.3em;
+    }
+    body {
+        font-size: 0.7em;
+    }
+    h1 {
+        font-size: 5em;
+    }
+    .body-container {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .twitter-bar {
+        font-size: 1.3em;
+        top: 10em;
+    }
+    .img-container-container {
+        width: 25em;
+        height: 25em;
+    }
+    .country-name,
+    .book-flight {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 565px) {
+    .img-container-container {
+        width: 19.8em;
+        height: 19.8em;
+    }
+    .country-name,
+    .book-flight {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        font-size: 0.65em;
+    }
+    .img-container-container {
+        width: 45em;
+        height: 30em;
+    }
+    .country-name,
+    .book-flight {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 370px) {
+    body {
+        font-size: 0.54em;
     }
 }
