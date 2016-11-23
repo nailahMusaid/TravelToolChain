@@ -126,7 +126,7 @@ body {
     /*filter: blur(4px) opacity(87%);*/
     filter: blur(12px) opacity(51%) drop-shadow(0 0 rgba(218, 255, 250, 0.6));
     width: 100vw;
-    height: 560px;
+    height: 100vh;
     position: fixed;
 }
 
