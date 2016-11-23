@@ -259,8 +259,10 @@ header {
 section.results {
     /*float: left;*/
     text-align: center;
-    position: relative;
-    top: 78px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .clearfix:after,
@@ -280,6 +282,7 @@ a.recommendation-block {
     background-color: RGB(208, 162, 52);
     /*   border: 1px solid grey; */
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 a.recommendation-block * {
@@ -298,6 +301,8 @@ a.recommendation-block * {
     background-image: url("http://placehold.it/600x400/1eb53a/0099b5/?text=Uzbek");
     background-size: cover;
     background-position: 50% 50%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .country-name {
@@ -313,13 +318,22 @@ a.recommendation-block * {
 
 .book-flight {
     font-size: 1em;
+    margin: 2px;
     text-align: right;
     text-transform: lowercase;
     font-family: Lato;
+    position: relative;
+    right: 0.5em;
 }
 
 .book-flight:first-letter {
     text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+    .img-container-container {
+        width: 40em;
+        height: 18em;
+    }
 }
 
 @media (max-width: 960px) {
@@ -327,8 +341,8 @@ a.recommendation-block * {
         font-size: 0.8em;
     }
     .img-container-container {
-        width: 14em;
-        height: 14em;
+        width: 30em;
+        height: 18em;
     }
 }
 
@@ -337,8 +351,8 @@ a.recommendation-block * {
         font-size: 0.8em;
     }
     .img-container-container {
-        width: 11em;
-        height: 11em;
+        width: 30em;
+        height: 18em;
     }
 }
 
@@ -372,8 +386,8 @@ a.recommendation-block * {
         font-size: 2.8em;
     }
     .img-container-container {
-        width: 25em;
-        height: 25em;
+        width: 55em;
+        height: 30em;
     }
     .country-name,
     .book-flight {
@@ -383,8 +397,8 @@ a.recommendation-block * {
 
 @media (max-width: 565px) {
     .img-container-container {
-        width: 19.8em;
-        height: 19.8em;
+        width: 48em;
+        height: 25em;
     }
     .country-name,
     .book-flight {

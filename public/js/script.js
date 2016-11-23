@@ -11,28 +11,52 @@ var slogan = $("slogan");
 twitter_handle.val("@BarackObama"); //default value
 submit_button.click(function(e) {
     e.preventDefault();
+    setTimeout(function(){
+        var result = [];
+        var imageCopy = clone(images);
+        var imageArray = [];
+        for (country in imageCopy) {
+            imageArray.push(country);
+        }
 
-    var result = [];
-    var imageCopy = clone(images);
-    var imageArray = [];
-    for (country in imageCopy) {
-        imageArray.push(country);
-    }
 
-    for (var i = 3 - 1; i >= 0; i--) {
-        var rand = Math.floor(Math.random() * imageArray.length);
-        var randomCountry = imageArray.splice(rand, 1)[0];
-        result.push([randomCountry, images[randomCountry]]);
-    }
+        //hash method
+        var string = twitter_handle.val();
+        if (string[0] == '@') {
+            string = string.slice(1, string.length-1);
+        }
+        var sum = 1;
+        for (var i = 0; i < string.length; i++) {
+            var ascii = string[i].charCodeAt(0);
+            if (ascii != 0) {
+                sum *= string[i].charCodeAt(0);
+            }
+        }
+        for (var i = 3 - 1; i >= 0; i--) {
+            var rand = sum % imageArray.length;
+            var randomCountry = imageArray.splice(rand, 1)[0];
+            result.push([randomCountry, images[randomCountry]]);
+            sum = Math.floor(sum);
+        }
 
-    changeValues(result);
+        // random method
+        // for (var i = 3 - 1; i >= 0; i--) {
+        //     var rand = Math.floor(Math.random() * imageArray.length);
+        //     var randomCountry = imageArray.splice(rand, 1)[0];
+        //     result.push([randomCountry, images[randomCountry]]);
+        // }
 
-    slogan.toggleClass("hidden", false);
-    result_panel.toggleClass("hidden", false);
-    twitter_bar.toggleClass("result-page", true);
-    header.toggleClass("result-page", true);
-    title.toggleClass("centered", false);
-    // twitter_bar.
+        changeValues(result);
+
+        slogan.toggleClass("hidden", false);
+        result_panel.toggleClass("hidden", false);
+        twitter_bar.toggleClass("result-page", true);
+        header.toggleClass("result-page", true);
+        title.toggleClass("centered", false);
+        // twitter_bar.
+    }, 600);
+
+
 });
 
 
