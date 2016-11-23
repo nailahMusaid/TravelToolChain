@@ -27,11 +27,11 @@ submit_button.click(function(e) {
 
     changeValues(result);
 
-    slogan.toggleClass("hidden");
-    result_panel.toggleClass("hidden");
-    twitter_bar.toggleClass("result-page");
-    header.toggleClass("result-page");
-    title.toggleClass("centered");
+    slogan.toggleClass("hidden", false);
+    result_panel.toggleClass("hidden", false);
+    twitter_bar.toggleClass("result-page", true);
+    header.toggleClass("result-page", true);
+    title.toggleClass("centered", false);
     // twitter_bar.
 });
 
