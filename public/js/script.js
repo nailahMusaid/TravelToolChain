@@ -23,7 +23,8 @@ submit_button.click(function(e) {
         //hash method
         var string = twitter_handle.val();
         if (string[0] == '@') {
-            string = string.slice(1, string.length-1);
+            string = string.slice(1, string.length);
+            console.log(string);
         }
         var sum = 1;
         for (var i = 0; i < string.length; i++) {
@@ -76,7 +77,7 @@ function clone(obj){
 
 function waitTime(start, end) {
     var range = end - start;
-    return random() * range + start;
+    return Math.random() * range + start;
 }
 
 // <a class="recommendation-block" href="http://etihad.com">
