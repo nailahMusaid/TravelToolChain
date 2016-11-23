@@ -109,6 +109,10 @@ input[type="radio"] {
     visibility: hidden;
 }
 
+*:focus {
+    outline: 3px solid purple;
+}
+
 body {
     font-family: Lato, sans-serif;
 }
