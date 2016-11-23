@@ -109,48 +109,8 @@ input[type="radio"] {
     visibility: hidden;
 }
 
-.results {
-    position: relative;
-    top: 15em;
-}
-
-h1 {
-    margin: 0;
-    margin-top: -5vh;
-    color: black;
-}
-
-header {
-    margin-top: 20vh;
-    height: 20vh;
-    font-family: Oswald, sans-serif;
-    font-kerning: auto;
-    font-size: 2em;
-    /*letter-spacing: 0.1em;*/
-    float: left;
-    width: 100%;
-}
-
-header.result-page {
-    font-size: 1em;
-    margin-top: 5vh;
-}
-
-header.result-page h1 {
-    /*mt*/
-}
-
-header p {
-    text-align: center;
-    font-family: Lato;
-    font-size: 0.7em;
-    /*letter-spacing: 0.05em;*/
-    margin-top: 10vh;
-}
-
-section,
-header {
-    position: relative;
+body {
+    font-family: Lato, sans-serif;
 }
 
 .body-container {
@@ -162,27 +122,71 @@ header {
     /*filter: blur(4px) opacity(87%);*/
     filter: blur(12px) opacity(51%) drop-shadow(0 0 rgba(218, 255, 250, 0.6));
     width: 100vw;
-    height: 100vh;
+    height: 560px;
     position: fixed;
 }
 
-body {
-    font-family: Lato, sans-serif;
+/* Header */
+
+header {
+    margin-top: 112px;
+    height: 112px;
+    font-family: Oswald, sans-serif;
+    font-kerning: auto;
+    font-size: 2em;
+    /*letter-spacing: 0.1em;*/
+    float: left;
+    width: 100%;
 }
 
+header.result-page {
+    font-size: 1em;
+    margin-top: 28px;
+}
+
+h1 {
+    margin: 0;
+    margin-top: -28px;
+    color: black;
+}
+
+header.result-page p {
+    font-size: 1.4em;
+    position: relative;
+    top: 24.2px;
+}
+
+header p {
+    text-align: center;
+    font-family: Lato;
+    font-size: 0.7em;
+    /*letter-spacing: 0.05em;*/
+    margin-top: 92px;
+}
+
+section,
+header {
+    position: relative;
+}
+
+
+/* Twitter Bar */
+
 .twitter-bar {
-    top: 7em;
+    top: 164px;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: Lato, sans-serif;
     height: 1.25em;
     display: block;
     text-align: center;
-    position: relative;
+    position: absolute;
 }
 
 .twitter-bar input {
     padding-left: 0.5em;
     font-size: 0.7em;
-    width: 15em;
+    width: 9em;
     border-top-right-radius: 0.2em;
     border-bottom-right-radius: 0.2em;
 }
@@ -229,11 +233,25 @@ body {
     top: 52%;
 }
 
+
+/* twitter bar - result */
+.twitter-bar.result-page {
+    font-size: 2em;
+    top: 44.8px;
+}
+
+
+
+
+
+
+/* RESULT PANEL */
+
 section.results {
     /*float: left;*/
     text-align: center;
     position: relative;
-    top: -20%;
+    top: 78px;
 }
 
 .clearfix:after,
@@ -252,6 +270,7 @@ a.recommendation-block {
     color: inherit;
     background-color: RGB(208, 162, 52);
     /*   border: 1px solid grey; */
+    margin-bottom: 10px;
 }
 
 a.recommendation-block * {
@@ -313,6 +332,12 @@ a.recommendation-block * {
     }
 }
 
+@media (max-width: 770px) {
+    header.result-page p {
+        top: 0;
+    }
+}
+
 @media (max-width: 600px) {
     header p {
         font-size: 1.3em;
@@ -328,8 +353,13 @@ a.recommendation-block * {
         background-size: cover;
     }
     .twitter-bar {
-        font-size: 1.3em;
-        top: 10em;
+        font-size: 1.5em;
+    }
+    .twitter-bar.result-page {
+        font-size: 2.8em;
+    }
+    header.result-page p {
+        font-size: 2.8em;
     }
     .img-container-container {
         width: 25em;
@@ -364,10 +394,22 @@ a.recommendation-block * {
     .book-flight {
         font-size: 3em;
     }
+    .twitter-bar {
+        font-size: 2em;
+        left: 35%;
+        transform: translateX(-23%);
+    }
+    .twitter-bar.result-page {
+        font-size: 3.8em;
+    }
 }
 
 @media (max-width: 370px) {
     body {
         font-size: 0.54em;
+    }
+    .twitter-bar {
+        left: 26%;
+        transform: translateX(-14%);
     }
 }

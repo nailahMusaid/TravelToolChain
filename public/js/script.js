@@ -9,7 +9,8 @@
     var slogan = $("slogan");
 
     twitter_handle.val("@BarackObama"); //default value
-    submit_button.click(function() {
+    submit_button.click(function(e) {
+        e.preventDefault();
         // header.style["font-size"] = "1.5em";
         // title.style["font-family"] = "Oswald";
         // title.style["letter-spacing"] = "0.04em";
@@ -20,5 +21,6 @@
         result_panel.toggleClass("hidden");
         twitter_bar.toggleClass("result-page");
         header.toggleClass("result-page");
+        title.toggleClass("centered");
         // twitter_bar.
     });
