@@ -54,7 +54,7 @@ submit_button.click(function(e) {
         header.toggleClass("result-page", true);
         title.toggleClass("centered", false);
         // twitter_bar.
-    }, 600);
+    }, waitTime(400, 1300));
 
 
 });
@@ -74,6 +74,10 @@ function clone(obj){
     return JSON.parse(JSON.stringify(obj));
 }
 
+function waitTime(start, end) {
+    var range = end - start;
+    return random() * range + start;
+}
 
 // <a class="recommendation-block" href="http://etihad.com">
 //     <div class="img-container-container">
